@@ -32,4 +32,33 @@ public class MemberServiceImpl implements MemberService {
 		return res;
 	}
 
+	@Override
+	public MemberVO selectMember(String id) {
+		MemberVO vo = mapper.selectMember(id);
+		return vo;
+	}
+	
+	
+//	@Override
+//	public int updateMember(String id, String pw, String email) {
+//		int res = mapper.updateMember(id, pw, email);
+//		return res;
+//	}
+	@Override
+	public int updateMember(MemberVO member) {
+		int res = mapper.updateMember(member);
+		return res;
+	}
+	
+	@Override
+	public int deleteMember(String id) {
+		int res = mapper.deleteMember(id);
+		return res;
+	}
+	
+	@Override
+	public int countMember() {
+		int res = mapper.countMember();
+		return res;
+	}
 }
